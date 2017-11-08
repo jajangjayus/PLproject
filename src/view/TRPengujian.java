@@ -300,16 +300,16 @@ public class TRPengujian extends javax.swing.JInternalFrame {
         lblTorsi = new javax.swing.JLabel();
         lblBeratCap = new javax.swing.JLabel();
         lblTinggiCap = new javax.swing.JLabel();
-        txtTorsiCap = new javax.swing.JFormattedTextField();
         txtBeratCap = new javax.swing.JFormattedTextField();
         txtTinggiCap = new javax.swing.JFormattedTextField();
+        txtTorsiCap = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         lblVisual = new javax.swing.JLabel();
         lblDropTest = new javax.swing.JLabel();
         lblUjiVolume = new javax.swing.JLabel();
         cbVisual = new javax.swing.JComboBox<>();
-        txtDropTest = new javax.swing.JFormattedTextField();
-        txtUjiVolume = new javax.swing.JFormattedTextField();
+        txtDropTest = new javax.swing.JTextField();
+        txtUjiVolume = new javax.swing.JTextField();
         btnTambahButton = new javax.swing.JButton();
         btnUbahSample = new javax.swing.JButton();
 
@@ -390,12 +390,12 @@ public class TRPengujian extends javax.swing.JInternalFrame {
                     .addComponent(confirmCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jxdTanggal, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
                     .addComponent(mwhComboBox, 0, 178, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblPemeriksa))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtJumlahTest, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -519,7 +519,7 @@ public class TRPengujian extends javax.swing.JInternalFrame {
 
         txtBeratBtl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.0"))));
 
-        txtTinggiBtl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtTinggiBtl.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.0"))));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -566,11 +566,9 @@ public class TRPengujian extends javax.swing.JInternalFrame {
 
         lblTinggiCap.setText("* Tinggi");
 
-        txtTorsiCap.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtBeratCap.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.0"))));
 
-        txtBeratCap.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
-
-        txtTinggiCap.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txtTinggiCap.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.0"))));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -584,9 +582,9 @@ public class TRPengujian extends javax.swing.JInternalFrame {
                     .addComponent(lblBeratCap))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtTorsiCap, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                    .addComponent(txtBeratCap)
-                    .addComponent(txtTinggiCap))
+                    .addComponent(txtBeratCap, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(txtTinggiCap)
+                    .addComponent(txtTorsiCap))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -619,10 +617,6 @@ public class TRPengujian extends javax.swing.JInternalFrame {
 
         cbVisual.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Baik", "Tidak Baik" }));
 
-        txtDropTest.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
-
-        txtUjiVolume.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -636,11 +630,8 @@ public class TRPengujian extends javax.swing.JInternalFrame {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbVisual, 0, 116, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDropTest, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                            .addComponent(txtUjiVolume))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(txtDropTest)
+                    .addComponent(txtUjiVolume))
                 .addContainerGap())
         );
 
@@ -661,7 +652,7 @@ public class TRPengujian extends javax.swing.JInternalFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUjiVolume)
                     .addComponent(txtUjiVolume, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         btnTambahButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Folder-Add-icon 32.png"))); // NOI18N
@@ -1009,13 +1000,13 @@ public class TRPengujian extends javax.swing.JInternalFrame {
     private javax.swing.JFormattedTextField txtBeratBtl;
     private javax.swing.JFormattedTextField txtBeratCap;
     private javax.swing.JFormattedTextField txtCavity;
-    private javax.swing.JFormattedTextField txtDropTest;
+    private javax.swing.JTextField txtDropTest;
     private javax.swing.JLabel txtJumlahTest;
     private javax.swing.JTextField txtPemeriksa;
     private javax.swing.JFormattedTextField txtTinggiBtl;
     private javax.swing.JFormattedTextField txtTinggiCap;
-    private javax.swing.JFormattedTextField txtTorsiCap;
-    private javax.swing.JFormattedTextField txtUjiVolume;
+    private javax.swing.JTextField txtTorsiCap;
+    private javax.swing.JTextField txtUjiVolume;
     // End of variables declaration//GEN-END:variables
 
     private void simpanKeSampleTable() {
